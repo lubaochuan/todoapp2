@@ -4,6 +4,7 @@ Example app for Mobile app class Spring 2019.
 ```
 expo init todoapp2 --template blank@sdk-32 --yarn
 yarn add native-base --save
+yarn add @expo/vector-icons --save
 
 cd todoapp2
 yarn start
