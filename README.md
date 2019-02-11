@@ -11,5 +11,8 @@ yarn start
 ```
 # Step 1
 Create a static list of todos. We will use the
-[List component}(http://docs.nativebase.io/Components.html#list-def-headref)
+[List component](http://docs.nativebase.io/Components.html#list-def-headref)
 from native-base.
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/bc21e7e8166aa675087e6cada171b6cc2b2d91e2)
+for the solution.
