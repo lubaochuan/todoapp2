@@ -20,3 +20,6 @@ for the solution.
 # Step 2
 Render an array of todo items by following this
 [example](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/master/src/screens/list/basic-list.js).
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/6fdeb37a1c9b1ed5195475374225dca6125a0863
+for the solution.
