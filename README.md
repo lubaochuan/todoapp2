@@ -16,3 +16,7 @@ from native-base.
 
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/bc21e7e8166aa675087e6cada171b6cc2b2d91e2)
 for the solution.
+
+# Step 2
+Render an array of todo items by following this
+[example](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/master/src/screens/list/basic-list.js).
