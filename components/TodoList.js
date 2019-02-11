@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Header, Content, List, ListItem, Text } from 'native-base'
+import TodoInput from "./TodoInput"
 
 export default class TodoList extends React.Component {
   render() {
@@ -9,6 +10,7 @@ export default class TodoList extends React.Component {
       <Container>
         <Header />
         <Content>
+          <TodoInput />
           <List
             dataArray={list}
             renderRow={item=>
