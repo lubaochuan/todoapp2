@@ -11,7 +11,8 @@ export default class TodoInput extends Component {
 
     if (!text) return // Don't submit if empty
 
-    console.log("submit:"+this.state.text)
+    console.log("submit:"+text)
+    this.props.onAddTodo({todo: text})
     this.setState({text: ''})
   }
 

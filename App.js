@@ -8,13 +8,24 @@ export default class App extends React.Component {
   state = {
     list: [{todo: "Eat"}, {todo: "Drink"}, {todo: "Be merry"}]}
 
+  onAddTodo = (todo) => {
+    const {list} = this.state
+
+    this.setState({
+      list: [todo, ...list],
+    })
+    console.log(this.state)
+  }
+
   render() {
     return (
       <Container>
         <Header />
         <Content>
-          <TodoInput />
-          <TodoList list={this.state.list}/>
+          <TodoInput
+            onAddTodo={this.onAddTodo}/>
+          <TodoList
+            list={this.state.list}/>
         </Content>
       </Container>
     )
