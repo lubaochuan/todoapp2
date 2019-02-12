@@ -39,3 +39,14 @@ See this [diff](https://github.com/lubaochuan/todoapp2/commit/7c22705de17b8b25d5
 Handle adding new todo with a reverse data flow.
 
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/e89fbcb5cb1b4d3914797d887aa9a259a03e50ab) for the solution.
+
+# Step 5
+Delete a todo with a tap.
+
+To use array index to identify items, we must understand the signature of
+the [`renderRow` function](http://facebook.github.io/react-native/docs/listview.html#renderrow)
+
+The `ListItem` in native-base implements react-native's [`touchablehighlight`](https://facebook.github.io/react-native/docs/touchablehighlight.html)
+Therefore, a `ListItem` can respond to `press` events.
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/19455ed1bf539a1c196514c455061cad258cebee) for the solution.
