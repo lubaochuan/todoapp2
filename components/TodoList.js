@@ -1,26 +1,15 @@
 import React from 'react'
-import { Container, Header, Content, List, ListItem, Text } from 'native-base'
-import TodoInput from "./TodoInput"
+import { List, ListItem, Text } from 'native-base'
 
-export default class TodoList extends React.Component {
-  render() {
-    list = [{todo: "Eat"}, {todo: "Drink"}, {todo: "Be merry"}]
-
-    return (
-      <Container>
-        <Header />
-        <Content>
-          <TodoInput />
-          <List
-            dataArray={list}
-            renderRow={item=>
-              <ListItem>
-                <Text>{item.todo}</Text>
-              </ListItem>
-            }>
-          </List>
-        </Content>
-      </Container>
-    )
-  }
+export default function TodoList(props){
+  return (
+    <List
+      dataArray={props.list}
+      renderRow={item=>
+        <ListItem>
+          <Text>{item.todo}</Text>
+        </ListItem>
+      }>
+    </List>
+  )
 }
