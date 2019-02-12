@@ -17,6 +17,10 @@ export default class App extends React.Component {
     console.log(this.state)
   }
 
+  onDeleteTodo = (index) => {
+    console.log("delete todo at index:"+index)
+  }
+
   render() {
     return (
       <Container>
@@ -25,7 +29,8 @@ export default class App extends React.Component {
           <TodoInput
             onAddTodo={this.onAddTodo}/>
           <TodoList
-            list={this.state.list}/>
+            list={this.state.list}
+            onDeleteTodo={this.onDeleteTodo}/>
         </Content>
       </Container>
     )
