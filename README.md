@@ -23,3 +23,12 @@ Render an array of todo items by following this
 
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/6fdeb37a1c9b1ed5195475374225dca6125a0863
 for the solution.
+
+# Step 3
+Add an input field for new todos by following this
+[example](http://www.reactnativeexpress.com/data_component_state)
+
+Play with the app, check the console output and try to identify some problems.
+I shouldn't add the new todo item to the list yet.
+
+[controlled input](https://learn.freecodecamp.org/front-end-libraries/react/create-a-controlled-input)

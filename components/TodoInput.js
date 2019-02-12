@@ -4,6 +4,8 @@ import { Input } from 'native-base'
 export default class TodoInput extends Component {
   state = { text: 'add new todo' }
 
+  onChangeText = (text) => this.setState({text})
+
   onSubmitEditing = () => {
     const {text} = this.state
 
@@ -17,7 +19,7 @@ export default class TodoInput extends Component {
     return (
       <Input placeholder='Add new todo' bordered
         value={this.state.text}
-        onChangeText={(text) => this.setState({text})}
+        onChangeText={this.onChangeText}
         onSubmitEditing={this.onSubmitEditing}/>
     )
   }
