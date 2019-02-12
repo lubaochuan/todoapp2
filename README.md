@@ -34,3 +34,8 @@ I shouldn't add the new todo item to the list yet.
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/7c22705de17b8b25d5ebd0015f316a6cc55a3e87?diff=split) for the solution.
 
 [controlled input](https://learn.freecodecamp.org/front-end-libraries/react/create-a-controlled-input)
+
+# Step 4
+Handle adding new todo with a reverse data flow.
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/e89fbcb5cb1b4d3914797d887aa9a259a03e50ab) for the solution.
