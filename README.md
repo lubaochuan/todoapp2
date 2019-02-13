@@ -52,4 +52,5 @@ Therefore, a `ListItem` can respond to `press` events.
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/19455ed1bf539a1c196514c455061cad258cebee) for the solution.
 
 You app should look as follows:
+
 ![demo video](./images/add_delete.gif)
