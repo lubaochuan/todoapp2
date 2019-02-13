@@ -3,11 +3,11 @@ Example app for Mobile app class Spring 2019.
 # Setup
 ```
 expo init todoapp2 --template blank@sdk-32 --yarn
+cd todoapp2
 yarn add native-base --save
 yarn add @expo/vector-icons --save
-
-cd todoapp2
 yarn start
+
 ```
 # Step 1
 Create a static list of todos. We will use the
@@ -21,7 +21,7 @@ for the solution.
 Render an array of todo items by following this
 [example](https://github.com/GeekyAnts/NativeBase-KitchenSink/blob/master/src/screens/list/basic-list.js).
 
-See this [diff](https://github.com/lubaochuan/todoapp2/commit/6fdeb37a1c9b1ed5195475374225dca6125a0863
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/6fdeb37a1c9b1ed5195475374225dca6125a0863)
 for the solution.
 
 # Step 3
@@ -50,3 +50,6 @@ The `ListItem` in native-base implements react-native's [`touchablehighlight`](h
 Therefore, a `ListItem` can respond to `press` events.
 
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/19455ed1bf539a1c196514c455061cad258cebee) for the solution.
+
+You app should look as follows:
+![demo video](./images/add_delete.gif)
