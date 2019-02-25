@@ -54,3 +54,15 @@ See this [diff](https://github.com/lubaochuan/todoapp2/commit/19455ed1bf539a1c19
 You app should look as follows:
 
 ![demo video](./images/add_delete.gif)
+
+# Step 6
+Add EditScreen and navigate to it. We will apply what we learned from
+[this example add](https://github.com/lubaochuan/react-navigation).
+
+First, install `react-navigation` package:
+```
+yarn add react-navigation --save
+```
+
+We will use a pop-up menu to let users select "edit", "delete", or cancel.
+The menu is activated by long-press on a todo item.
