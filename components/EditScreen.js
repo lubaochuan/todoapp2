@@ -1,15 +1,15 @@
 import React from "react"
 import { Text } from "react-native"
-import { Container, Content, Card, CardItem, Body, Button } from "native-base"
+import { Container, Content, Card, CardItem, Body, Button, Input } from "native-base"
 
 export default class EditScreen extends React.Component {
+  state = { text: this.props.navigation.getParam('item').todo }
+
   static navigationOptions = ({ navigation }) => {
     return {
       title: 'Edit Todo',
     }
   }
-
-  state = { text: ''}
 
   onChangeText = (text) => this.setState({text})
 
@@ -18,17 +18,19 @@ export default class EditScreen extends React.Component {
 
     if (!text) return // Don't submit if empty
 
-    console.log("submit:"+text)
-    const index = navigation.getParam('index');
-    const onUpdateTodo = this.props.navigation.getParams('onUpdateTodo')
-    onUpdateTodo({index, item: {todo: text}})
+    console.log("submit updated todo:"+text)
+    const index = this.props.navigation.getParam('index');
+    const onUpdateTodo = this.props.navigation.getParam('onUpdateTodo')
+    onUpdateTodo(index, {todo: text})
+
     this.setState({text: ''})
+    this.props.navigation.goBack()
   }
 
   render() {
-    const { navigation } = this.props;
-    const index = navigation.getParam('index');
-    const item = navigation.getParam('item');
+    const { navigation } = this.props
+    const index = navigation.getParam('index')
+    console.log("edit item at index:"+index)
 
     return (
       <Container>
@@ -39,7 +41,7 @@ export default class EditScreen extends React.Component {
           onSubmitEditing={this.onSubmitEditing}/>
         <Button  full
            style={{ marginTop: 10 }}
-           onPress={() => this.onSubmitEditing}>
+           onPress={this.onSubmitEditing}>
            <Text>Save</Text>
          </Button>
          <Button  full

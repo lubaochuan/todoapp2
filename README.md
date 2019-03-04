@@ -64,5 +64,12 @@ First, install `react-navigation` package:
 yarn add react-navigation --save
 ```
 
-We will use a pop-up menu to let users select "edit", "delete", or cancel.
-The menu is activated by long-press on a todo item.
+First, we will use a pop-up menu to let users select "edit", "delete", or cancel.
+The menu is activated by a long-press on a todo item.
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/00072ada9332ab11370534fa47ea2e671ead6f10) for the solution.
+
+Next, we will use navigation parameters to pass an item and a callback function
+to the EditScreen. The callback function takes the updated item and updates in
+the list. We will need to pass the index of the item in the array/state so that
+the item can be identified.

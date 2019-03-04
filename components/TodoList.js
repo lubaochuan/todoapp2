@@ -3,7 +3,7 @@ import { Alert } from 'react-native'
 import { List, ListItem, Text } from 'native-base'
 
 export default function TodoList(props){
-  const { list, onDeleteTodo } = props
+  const { list, onDeleteTodo, onEditTodo } = props
   return (
     <List
       dataArray={list}
@@ -14,7 +14,7 @@ export default function TodoList(props){
               'Quick Menu',
               null,
               [
-                {text: 'Edit', onPress: () => console.log("to edit")},
+                {text: 'Edit', onPress: () => onEditTodo(index, item)},
                 {text: 'Delete', onPress: () => onDeleteTodo(index)},
                 {text: 'Cancel'},
               ],
