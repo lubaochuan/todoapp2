@@ -73,3 +73,5 @@ Next, we will use navigation parameters to pass an item and a callback function
 to the EditScreen. The callback function takes the updated item and updates in
 the list. We will need to pass the index of the item in the array/state so that
 the item can be identified.
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/550226ad451bd54f688c14ca4dca508c2c338771) for the solution.
