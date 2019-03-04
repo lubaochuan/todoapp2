@@ -57,7 +57,7 @@ You app should look as follows:
 
 # Step 6
 Add EditScreen and navigate to it. We will apply what we learned from
-[this example add](https://github.com/lubaochuan/react-navigation).
+[this example app](https://github.com/lubaochuan/react-navigation).
 
 First, install `react-navigation` package:
 ```
