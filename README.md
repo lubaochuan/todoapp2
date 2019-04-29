@@ -66,3 +66,12 @@ yarn add react-navigation --save
 
 We will use a pop-up menu to let users select "edit", "delete", or cancel.
 The menu is activated by long-press on a todo item.
+
+# Step 7
+Use redux to manage state and use firebase for remote storage.
+
+Install packages:
+```
+yarn add redux react-redux --save
+yarn add firebase redux-thunk --save
+ ```
