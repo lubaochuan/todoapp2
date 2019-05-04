@@ -102,4 +102,4 @@ One more thing, add local persistence.
 ```
 yarn add redux-persist
 ```
-
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/70283c67bbd866df165ee406eedc93cd24a2ac54) for the solution.
