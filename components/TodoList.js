@@ -3,7 +3,7 @@ import { Alert } from 'react-native'
 import { List, ListItem, Text } from 'native-base'
 
 export default function TodoList(props){
-  const { list, onToggleTodo, onEditTodo } = props
+  const { list, onToggleTodo, onEditTodo, onDeleteTodo } = props
   
   return (
     <List
