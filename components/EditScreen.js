@@ -2,8 +2,11 @@ import React from "react"
 import { Text } from "react-native"
 import { Container, Content, Card, CardItem, Body, Button, Input } from "native-base"
 
-export default class EditScreen extends React.Component {
-  state = { text: this.props.navigation.getParam('item').todo }
+import { connect } from 'react-redux'
+import { updateTodo } from '../src/actions'
+
+class EditScreen extends React.Component {
+  state = this.props.navigation.getParam('item')
 
   static navigationOptions = ({ navigation }) => {
     return {
@@ -14,16 +17,13 @@ export default class EditScreen extends React.Component {
   onChangeText = (text) => this.setState({text})
 
   onSubmitEditing = () => {
-    const {text} = this.state
+    const item = this.state
 
-    if (!text) return // Don't submit if empty
+    if (!item.text) return // Don't submit if empty
 
-    console.log("submit updated todo:"+text)
-    const index = this.props.navigation.getParam('index');
-    const onUpdateTodo = this.props.navigation.getParam('onUpdateTodo')
-    onUpdateTodo(index, {todo: text})
-
-    this.setState({text: ''})
+    console.log("submit updated todo:"+JSON.stringify(item))
+    const index = this.props.navigation.getParam('index')
+    this.props.onUpdateTodo(Number(index), item)
     this.props.navigation.goBack()
   }
 
@@ -54,3 +54,11 @@ export default class EditScreen extends React.Component {
     )
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onUpdateTodo: (index, todo) => dispatch(updateTodo(index, todo))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(EditScreen)

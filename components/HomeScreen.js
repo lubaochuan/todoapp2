@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Header, Content } from 'native-base'
 
 import { connect } from 'react-redux'
-import { addTodo, toggleTodo } from '../src/actions'
+import { addTodo, toggleTodo, updateTodo } from '../src/actions'
 
 import TodoList from './TodoList'
 import TodoInput from "./TodoInput"
@@ -15,11 +15,8 @@ class HomeScreen extends React.Component {
   }
 
   onEditTodo = (index, item) => {
-    this.props.navigation.navigate("EditScreen",
-      {index, item, onUpdateTodo: this.onUpdateTodo})
+    this.props.navigation.navigate("EditScreen", {index, item})
   }
-
-  onUpdateTodo = (index, newItem) => {}
 
   onDeleteTodo = (index) => {}
 

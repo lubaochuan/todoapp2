@@ -35,9 +35,11 @@ function todos(state = [], action) {
         return todo
       })
     case UPDATE_TODO:
+      //console.log("update todo:"+JSON.stringify(action.todo)
+      //  + " with index:"+action.index)
       return state.map((todo, index) => {
         if (index === action.index) {
-          return Object.assign({}, todo)
+          return Object.assign({}, todo, action.todo)
         }
         return todo
       })
