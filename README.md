@@ -89,3 +89,7 @@ See this [diff](https://github.com/lubaochuan/todoapp2/commit/f8d54882918ce5ffb0
 Next, use redux to toggle todos.
 
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/d5270dfb598efa66ebb78899c08a62ad946d62bd) for the solution.
+
+Next, use redux to update todos.
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/5a7162b8f328ade6f45e710f9be67e7929fc62ca) for the solution.
