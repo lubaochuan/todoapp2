@@ -93,3 +93,7 @@ See this [diff](https://github.com/lubaochuan/todoapp2/commit/d5270dfb598efa66eb
 Next, use redux to update todos.
 
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/5a7162b8f328ade6f45e710f9be67e7929fc62ca) for the solution.
+
+Lastly, use redux to delete todos.
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/163f1c602e14e30ddce2b845d1f28f0e82afe8a1) for the solution.
