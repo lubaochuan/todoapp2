@@ -20,7 +20,10 @@ export default function TodoList(props){
               ],
               { cancelable: false }
             )}>
-          <Text>{item.todo}</Text>
+            <Text
+              style={{textDecorationLine: item.completed ? 'line-through':'none'}}>
+              {item.text}
+            </Text>
         </ListItem>
       }>
     </List>
