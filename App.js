@@ -3,6 +3,8 @@ import { Container, Header, Content } from 'native-base'
 import { createStackNavigator, createAppContainer } from "react-navigation"
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web and AsyncStorage for react-native
 
 import todoApp from './src/reducers'
 import HomeScreen from './components/HomeScreen'
@@ -25,10 +27,20 @@ const logger = store => next => action => {
   return result
 }
 
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, todoApp)
+
 const store = createStore(
-  todoApp,
+  persistedReducer,
   applyMiddleware(logger)
 )
+
+// Enable persistence
+persistStore(store)
 
 // Dispatch some actions
 store.dispatch(addTodo('Learn about actions'))

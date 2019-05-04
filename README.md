@@ -97,3 +97,9 @@ See this [diff](https://github.com/lubaochuan/todoapp2/commit/5a7162b8f328ade6f4
 Lastly, use redux to delete todos.
 
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/163f1c602e14e30ddce2b845d1f28f0e82afe8a1) for the solution.
+
+One more thing, add local persistence.
+```
+yarn add redux-persist
+```
+
