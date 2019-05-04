@@ -25,6 +25,7 @@ function todos(state = [], action) {
         }
       ]
     case TOGGLE_TODO:
+      //console.log("toggle todo with index:"+action.index)
       return state.map((todo, index) => {
         if (index === action.index) {
           return Object.assign({}, todo, {

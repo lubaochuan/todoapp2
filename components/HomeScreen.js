@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Header, Content } from 'native-base'
 
 import { connect } from 'react-redux'
-import { addTodo } from '../sr/actions'
+import { addTodo, toggleTodo } from '../src/actions'
 
 import TodoList from './TodoList'
 import TodoInput from "./TodoInput"
@@ -24,7 +24,7 @@ class HomeScreen extends React.Component {
   onDeleteTodo = (index) => {}
 
   render() {
-    const {list, onAddTodo} = this.props
+    const {list, onAddTodo, onToggleTodo} = this.props
 
     return (
       <Container>
@@ -33,6 +33,7 @@ class HomeScreen extends React.Component {
             onAddTodo={onAddTodo}/>
           <TodoList
             list={list}
+            onToggleTodo={onToggleTodo}
             onEditTodo={this.onEditTodo}
             onDeleteTodo={this.onDeleteTodo}
           />
@@ -50,7 +51,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAddTodo: text => dispatch(addTodo(text))
+    onAddTodo: text => dispatch(addTodo(text)),
+    onToggleTodo: index => dispatch(toggleTodo(index))
   }
 }
 

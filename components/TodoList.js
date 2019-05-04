@@ -3,12 +3,14 @@ import { Alert } from 'react-native'
 import { List, ListItem, Text } from 'native-base'
 
 export default function TodoList(props){
-  const { list, onDeleteTodo, onEditTodo } = props
+  const { list, onToggleTodo } = props
+  
   return (
     <List
       dataArray={list}
       renderRow={(item, _, index)=>
         <ListItem
+          onPress={()=>{onToggleTodo(Number(index))}}
           onLongPress={() =>
             Alert.alert(
               'Quick Menu',
