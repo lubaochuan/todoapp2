@@ -5,8 +5,10 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web and AsyncStorage for react-native
+import reduxThunk from 'redux-thunk'
 
 import todoApp from './src/reducers'
+import { fetchTodos } from './src/actions'
 import HomeScreen from './components/HomeScreen'
 import EditScreen from "./components/EditScreen"
 
@@ -36,9 +38,10 @@ const persistedReducer = persistReducer(persistConfig, todoApp)
 
 const store = createStore(
   persistedReducer,
-  applyMiddleware(logger)
+  applyMiddleware(reduxThunk, logger)
 )
 
+/*
 // Enable persistence
 persistStore(store)
 
@@ -48,6 +51,7 @@ store.dispatch(addTodo('Learn about reducers'))
 store.dispatch(addTodo('Learn about store'))
 store.dispatch(toggleTodo(0))
 store.dispatch(toggleTodo(1))
+*/
 
 const MainStack = createStackNavigator({
   Home: {
@@ -64,6 +68,10 @@ const MainStack = createStackNavigator({
 const AppContainer = createAppContainer(MainStack)
 
 export default class App extends React.Component {
+  componentWillMount() {
+    store.dispatch(fetchTodos())
+  }
+
   render() {
     return (
       <Provider store={store}>

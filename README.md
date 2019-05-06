@@ -103,3 +103,33 @@ One more thing, add local persistence.
 yarn add redux-persist
 ```
 See this [diff](https://github.com/lubaochuan/todoapp2/commit/70283c67bbd866df165ee406eedc93cd24a2ac54) for the solution.
+
+# Step 8
+Sync redux managed state with firebase as described
+[here](https://blog.bitsrc.io/building-a-todo-app-in-react-with-firebase-and-redux-ba3ab53a671b).
+
+First, install `firebase` for firebase interactivity and `redux-thunk` for
+handling synchronous actions in redux.
+```
+yarn add firebase redux-thunk --save
+```
+
+Next, create a new project on [firebase](https://console.firebase.google.com).
+
+Next, copy firebase database configuration and put it in `src/keys.js`.
+```
+export default {
+  config: {
+    apiKey: "ENTER YOURS HERE",
+    authDomain: "ENTER YOURS HERE",
+    databaseURL: "ENTER YOURS HERE",
+    projectId: "ENTER YOURS HERE",
+    storageBucket: "ENTER YOURS HERE",
+    messagingSenderId: "ENTER YOURS HERE"
+  }
+}
+```
+Make sure you won't accidentally check it in your project repo by adding the following line  to your `.gitignore` file:
+```
+src/keys.js
+```

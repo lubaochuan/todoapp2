@@ -40,16 +40,29 @@ class HomeScreen extends React.Component {
   }
 }
 
+const transformTodos = (todos) => {
+  let array = []
+  const keys = Object.keys(todos)
+  for (const key of keys) {
+    if (key != "hidden"){
+      array.push({id:key, text:todos[key].text,
+                  completed:todos[key].completed})
+    }
+  }
+  console.log("todos:"+JSON.stringify(array))
+  return array
+}
+
 const mapStateToProps = state => {
   return {
-    list: state.todos
+    list: transformTodos(state.todos)
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     onAddTodo: text => dispatch(addTodo(text)),
-    onToggleTodo: index => dispatch(toggleTodo(index)),
+    onToggleTodo: (index, completed) => dispatch(toggleTodo(index, completed)),
     onDeleteTodo: index => dispatch(deleteTodo(index))
   }
 }

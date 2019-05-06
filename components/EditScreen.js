@@ -23,7 +23,7 @@ class EditScreen extends React.Component {
 
     console.log("submit updated todo:"+JSON.stringify(item))
     const index = this.props.navigation.getParam('index')
-    this.props.onUpdateTodo(Number(index), item)
+    this.props.onUpdateTodo(index, item)
     this.props.navigation.goBack()
   }
 

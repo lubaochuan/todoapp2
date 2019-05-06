@@ -10,14 +10,14 @@ export default function TodoList(props){
       dataArray={list}
       renderRow={(item, _, index)=>
         <ListItem
-          onPress={()=>{onToggleTodo(Number(index))}}
+          onPress={()=>{onToggleTodo(item.id, item.completed)}}
           onLongPress={() =>
             Alert.alert(
               'Quick Menu',
               null,
               [
-                {text: 'Edit', onPress: () => onEditTodo(index, item)},
-                {text: 'Delete', onPress: () => onDeleteTodo(index)},
+                {text: 'Edit', onPress: () => onEditTodo(item.id, item)},
+                {text: 'Delete', onPress: () => onDeleteTodo(item.id)},
                 {text: 'Cancel'},
               ],
               { cancelable: false }
