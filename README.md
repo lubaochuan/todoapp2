@@ -133,3 +133,5 @@ Make sure you won't accidentally check it in your project repo by adding the fol
 ```
 src/keys.js
 ```
+
+See this [diff](https://github.com/lubaochuan/todoapp2/commit/99366b1d874a7561d55c98550375348b3d66a796) for the solution.
